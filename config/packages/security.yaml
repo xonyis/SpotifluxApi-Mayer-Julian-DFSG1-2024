@@ -52,8 +52,14 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
         - { path: ^/api/login, roles: PUBLIC_ACCESS }
+        - { path: ^/artist,    roles: IS_AUTHENTICATED_FULLY }
         - { path: ^/api,       roles: IS_AUTHENTICATED_FULLY }
         - { path: ^/home,       roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/track,       roles: IS_AUTHENTICATED_FULLY }
+#        - { path: ^/artist,       roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/album,       roles: IS_AUTHENTICATED_FULLY }
+
+
 
 when@test:
     security:

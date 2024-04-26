@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Album{% endblock %}
+
+{% block body %}
+<div class="card col-4 m-auto mt-5">
+    <div class="card-body">
+    <h1>Create new Album</h1>
+
+    {{ include('album/_form.html.twig') }}
+
+    <a href="{{ path('app_album_index') }}">back to list</a>
+    </div>
+</div>
+{% endblock %}
